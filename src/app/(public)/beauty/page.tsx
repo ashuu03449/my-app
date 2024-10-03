@@ -43,9 +43,9 @@
                   <li><Link href="/men" className="text-[13px] font-medium text-gray-800 hover:text-gray-600">MEN</Link></li>
                   <li><Link href="/women" className="text-[13px] font-medium text-gray-800 hover:text-gray-600">WOMEN</Link></li>
                   <li><Link href="/kids" className="text-[13px] font-medium text-gray-800 hover:text-gray-600">KIDS</Link></li>
-                  <li><Link href="" className="text-[13px] font-medium text-gray-800 hover:text-gray-600">HOME & LIVING</Link></li>
+                  <li><Link href="/home" className="text-[13px] font-medium text-gray-800 hover:text-gray-600">HOME & LIVING</Link></li>
                   <li><Link href="/beauty" className="text-[13px] font-medium text-gray-800 hover:text-gray-600">BEAUTY</Link></li>
-                  <li><Link href="#" className="text-[13px] font-medium text-gray-800 hover:text-gray-600">STUDIO</Link></li>
+                  <li><Link href="/studio" className="text-[13px] font-medium text-gray-800 hover:text-gray-600">STUDIO</Link></li>
                 </ul>
               </nav>
             </div>

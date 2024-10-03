@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation"; // useRouter from next/navigation in the app directory
-import ImageSlider from "../../components/ImageSlider"; // Slider component import
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false); // State for toggling the menu
@@ -20,13 +19,7 @@ export default function Home() {
   ];
 
   // Sample slides for the ImageSlider component
-  const slides = [
-    { type: 'video', src: "/images/clothes.mp4" },
-    { type: 'image', src: "/images/down2.jpg" },
-    { type: 'image', src: "/images/download (1).jpg" },
-    { type: 'image', src: "/images/download (2).jpg" },
-    { type: 'image', src: "/images/download.jpg" }
-  ];
+
 
   const categories = [
     { name: "ETHNIC", imgSrc: "/images/down2.jpg" },
