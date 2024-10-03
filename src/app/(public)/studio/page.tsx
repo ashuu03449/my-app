@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link"; // useRouter from next/navigation in the app directory
+import Link from "next/link"; 
 import { useRouter } from 'next/navigation';
-
+import { usePathname } from 'next/navigation'; // Import usePathname hook
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false); // State for toggling the menu
-  const router = useRouter() as any; // Using 'any' type assertion
-
+  const router = useRouter(); // Using the router
+  const pathname = usePathname(); // Get current pathname
 
   const navLinks = [
     { href: "/men", label: "MEN" },
@@ -59,13 +59,12 @@ export default function Home() {
             <ul className="flex flex-col md:flex-row items-center gap-4 py-4 md:py-0">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                 <Link 
-  href={link.href} 
-  className={`text-[13px] font-medium text-gray-800 hover:text-gray-600 ${router.pathname === link.href ? 'border-b-2 border-gray-800' : ''}`}
->
-  {link.label}
-</Link>
-
+                  <Link 
+                    href={link.href} 
+                    className={`text-[13px] font-medium text-gray-800 hover:text-gray-600 ${pathname === link.href ? 'border-b-2 border-gray-800' : ''}` } // Use pathname here
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
