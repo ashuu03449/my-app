@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation"; // useRouter from next/navigation in the app directory
+import Link from "next/link"; // useRouter from next/navigation in the app directory
+import { useRouter } from 'next/navigation'; // Adjust import for useRouter
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false); // State for toggling the menu
@@ -13,13 +13,10 @@ export default function Home() {
     { href: "/men", label: "MEN" },
     { href: "/women", label: "WOMEN" },
     { href: "/kids", label: "KIDS" },
-    { href: "#", label: "HOME & LIVING" },
+    { href: "/home", label: "HOME & LIVING" },
     { href: "/beauty", label: "BEAUTY" },
     { href: "/studio", label: "STUDIO" }
   ];
-
-  // Sample slides for the ImageSlider component
-
 
   const categories = [
     { name: "ETHNIC", imgSrc: "/images/down2.jpg" },
@@ -62,7 +59,7 @@ export default function Home() {
                 <li key={index}>
                   <Link 
                     href={link.href} 
-                    className={`text-[13px] font-medium text-gray-800 hover:text-gray-600 ${router.pathname === link.href ? 'border-b-2 border-gray-800' : ''}`}
+                    className={`text-[13px] font-medium text-gray-800 hover:text-gray-600 ${router.asPath === link.href ? 'border-b-2 border-gray-800' : ''}`}
                   >
                     {link.label}
                   </Link>

@@ -10,7 +10,7 @@
     import Link from "next/link";
     import ImageSlider from "@/app/components/ImageSlider";
     const slides = [  
-        { type: 'image', src: "/images/hhhh.jpg" },
+        { type: 'image', src: "/images/hhh.jpg" },
         { type: 'image', src: "/images/h2.jpg" },
         { type: 'image', src: "/images/h3.jpg" },
         { type: 'image', src: "/images/h4.jpg" },
